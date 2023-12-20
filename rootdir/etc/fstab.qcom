@@ -35,7 +35,7 @@ vendor                                                  /vendor                e
 system_ext                                              /system_ext            ext4    ro,barrier=1                                         wait,logical,first_stage_mount,readahead_size_kb=128
 odm                                                     /odm                   ext4    ro,barrier=1                                         wait,logical,first_stage_mount,readahead_size_kb=128
 product                                                 /product               ext4    ro,barrier=1                                         wait,logical,first_stage_mount,readahead_size_kb=128
-/dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount
+/dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard,data=journal,commit=1   wait,check,formattable,first_stage_mount
 /dev/block/by-name/vbmeta                               /vbmeta                emmc    defaults                                             first_stage_mount
 /dev/block/bootdevice/by-name/cache                     /cache                 ext4    nosuid,noatime,nodev,barrier=1                       wait
 /dev/block/bootdevice/by-name/cache                     /cache                 f2fs    nosuid,noatime,nodev,fsync_mode=nobarrier            wait
