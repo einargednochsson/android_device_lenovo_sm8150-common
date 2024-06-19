@@ -145,6 +145,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -238,6 +242,7 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0.vendor \
+    libhidlmemory.vendor:64 \
     libhwbinder \
     libhwbinder.vendor
 
@@ -373,7 +378,10 @@ PRODUCT_PACKAGES += \
     libril \
     librilutils \
     librmnetctl \
-    libxml2
+    libxml2 \
+    libion.vendor \
+    libnetutils.vendor \
+    libsqlite.vendor:64
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -384,7 +392,8 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libpower.vendor
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
