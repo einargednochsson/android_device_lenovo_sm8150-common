@@ -186,6 +186,9 @@ PRODUCT_PACKAGES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     LenovoParts
+    
+# Update
+AB_OTA_UPDATER := false
 
 # Display
 PRODUCT_PACKAGES += \
@@ -216,17 +219,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm-service.clearkey
 
-<<<<<<< HEAD
-=======
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
-# Fastcharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.lenovo_sm8150
-
->>>>>>> 9d6c98a (sm8150-common: Enable fastbootd)
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.lenovo_msmnile
@@ -357,6 +349,7 @@ PRODUCT_PACKAGES += \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/partitions/flash_super_dummy.sh:install/bin/flash_super_dummy.sh
@@ -417,7 +410,8 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    bootable/deprecated-ota
 
 # Telephony
 PRODUCT_PACKAGES += \
