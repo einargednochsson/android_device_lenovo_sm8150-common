@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     libtinyxml \
     libvulkan \
+    libgui.vendor \
     memtrack.msmnile \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
