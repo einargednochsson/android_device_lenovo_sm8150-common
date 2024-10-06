@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libvulkan \
     libgui.vendor \
-    vendor.qti.hardware.memtrack-service
+    vendor.qti.hardware.memtrack-service \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
